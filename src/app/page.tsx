@@ -401,17 +401,46 @@ export default function Portfolio() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // 1. Basic Validation
     if (!formData.name || !formData.email || !formData.message) {
       setFormStatus("Please fill out all fields.");
       return;
     }
-    setFormStatus("Sending Message...");
-    setTimeout(() => {
-      setFormStatus("Message sent successfully!");
-      setFormData({ name: '', email: '', message: '' });
-    }, 1500);
+
+    setFormStatus("Transmitting payload...");
+
+    try {
+      // 2. Send the data to Web3Forms API
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "d93b0f05-99c2-4942-846b-768fdce53e1a", // <-- Paste your key here!
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `New Portfolio Message from ${formData.name}`,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setFormStatus("Message sent successfully! I will get back to you soon.");
+        setFormData({ name: '', email: '', message: '' }); // Clear the form
+      } else {
+        setFormStatus("Transmission failed. Please email me directly at krishnapriyass.ece@gmail.com");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setFormStatus("Network error. Please email me directly at krishnapriyass.ece@gmail.com");
+    }
   };
 
   return (
