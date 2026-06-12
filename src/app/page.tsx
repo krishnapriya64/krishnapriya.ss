@@ -283,8 +283,8 @@ export default function Portfolio() {
       title: "Visualtake Website",
       link: "https://visualtake.ai/",
       category: "Website Design",
-      tags: "Web Design",
-      tech: ["HTML5", "CSS3", "CSS Animations"],
+      tags: ["Web Design", "CSS3", "CSS Animations"],
+      tech: "HTML5",
       image: "linear-gradient(135deg, #f12711 0%, #f5af19 100%)",
       overview: "Premium platform showcasing interactive imagery with highly structured visual hierarchies.",
       challenge: "Organizing multiple high-density media feeds without causing layout shift or latency.",
@@ -296,8 +296,8 @@ export default function Portfolio() {
       title: "Movytech Website",
       link: "https://movytech.co/",
       category: "Website Design",
-      tags: "Web Design",
-      tech: ["HTML5", "CSS3", "CSS Animations"],
+      tags: ["Web Design", "CSS3", "CSS Animations"],
+      tech: "HTML5",
       image: "linear-gradient(135deg, #7F00FF 0%, #E100FF 100%)",
       overview: "Sleek movie catalog and presentation environment incorporating micro-interactive triggers.",
       challenge: "Keeping users engaged through fluid, non-disruptive transitions.",
@@ -309,8 +309,8 @@ export default function Portfolio() {
       title: "QureNote AI Website",
       link: "https://qurenote.ai/",
       category: "AI Healthcare Web App",
-      tags: ["UI/UX", "Frontend"],
-      tech: ["React.js", "Figma"],
+      tags: ["UI/UX", "Frontend", "React.js"],
+      tech: "Figma",
       image: "linear-gradient(135deg, #00b09b 0%, #96c93d 100%)",
       overview: "QureNote AI's public-facing web presence showcasing the AI-powered clinical documentation platform for healthcare providers.",
       challenge: "Communicating the sophistication of an AI healthcare product to both clinical and non-technical audiences.",
@@ -335,8 +335,8 @@ export default function Portfolio() {
       title: "Draft",
       link: "https://krishnapriyass.framer.website/draft",
       category: "Business Management App",
-      tags: ["UI/UX", "Mobile"],
-      tech: ["Figma", "Adobe XD"],
+      tags: ["UI/UX", "Mobile", "Figma"],
+      tech: "Adobe XD",
       image: "linear-gradient(135deg, #4A90D9 0%, #6C63FF 100%)",
       overview: "Business expense and collaboration platform designed to simplify finance tracking and team coordination.",
       challenge: "Presenting complex financial data in a clean, digestible format for non-technical business users.",
@@ -361,8 +361,8 @@ export default function Portfolio() {
       title: "Cafe Stop",
       link: "https://krishnapriyass.framer.website/cafestop",
       category: "E-Commerce Landing Page",
-      tags: ["UI/UX", "Web Design"],
-      tech: ["Figma", "Adobe XD"],
+      tags: ["UI/UX", "Web Design", "Figma"],
+      tech: "Adobe XD",
       image: "linear-gradient(135deg, #c8a97e 0%, #3d2b1f 100%)",
       overview: "E-commerce landing page for a premium coffee brand with a warm, inviting aesthetic and seamless product discovery.",
       challenge: "Conveying warmth, quality, and artisan craftsmanship through digital design alone.",
@@ -374,8 +374,8 @@ export default function Portfolio() {
       title: "Foodie",
       link: "https://krishnapriyass.framer.website/foodie",
       category: "Food Delivery App UI",
-      tags: ["UI/UX", "Mobile"],
-      tech: ["Figma", "Adobe XD"],
+      tags: ["UI/UX", "Mobile", "Figma"],
+      tech: "Adobe XD",
       image: "linear-gradient(135deg, #f7971e 0%, #ff4e50 100%)",
       overview: "Food delivery app UI with personalized meal recommendations.",
       challenge: "Reducing decision fatigue in a menu-heavy app while keeping the experience visually engaging.",
@@ -507,9 +507,9 @@ export default function Portfolio() {
               <a href="#projects" className="px-6 py-3 rounded-xl bg-[#111111] text-white hover:bg-blue-600 font-bold transition-all flex items-center text-sm shadow-md">
                 View My Work <ArrowUpRight className="ml-2 w-4 h-4" />
               </a>
-              <a href="#contact" className="px-6 py-3 rounded-xl border border-slate-300 bg-white hover:border-slate-400 text-slate-700 font-bold transition-all text-sm flex items-center gap-1.5">
+              {/* <a href="#contact" className="px-6 py-3 rounded-xl border border-slate-300 bg-white hover:border-slate-400 text-slate-700 font-bold transition-all text-sm flex items-center gap-1.5">
                 Download Resume <Download size={14} />
-              </a>
+              </a> */}
               <a href="#experience" className="px-6 py-3 text-slate-600 font-bold hover:text-blue-500 transition-all text-sm flex items-center gap-1.5">
                 See My Story <Play size={14} className="fill-current text-slate-400 group-hover:text-blue-500" />
               </a>
@@ -715,7 +715,6 @@ export default function Portfolio() {
                 Crafting Digital Experiences
               </h2>
             </div>
-            <span className="text-xs font-semibold text-slate-500 tracking-wider">SELECT RELEASES</span>
           </div>
 
           {/* Cards Grid */}
