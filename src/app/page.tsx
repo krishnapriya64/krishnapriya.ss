@@ -961,7 +961,7 @@ export default function Portfolio() {
                   type="submit"
                   className="w-full py-3 rounded-xl bg-[#111111] hover:bg-blue-600 text-white font-bold transition-all text-xs font-semibold flex items-center justify-center gap-2"
                 >
-                  <Send size={12} /> TRANSMIT DATAPACKET
+                  <Send size={12} /> SEND YOUR MESSAGE
                 </button>
               </form>
             </div>
