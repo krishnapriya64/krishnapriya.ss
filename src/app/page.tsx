@@ -799,11 +799,16 @@ export default function Portfolio() {
 
                 {/* Card Tag Footers */}
                 <div className="px-6 sm:px-8 pb-6 pt-2 flex flex-wrap gap-1.5 border-t border-slate-50/50">
-                  {proj.tags.map((tag, tIdx) => (
-                    <span key={tIdx} className="bg-slate-100 border border-slate-200 text-[10px] font-bold text-slate-600 px-3 py-1 rounded-lg">
-                      {tag}
-                    </span>
-                  ))}
+                  {Array.isArray(proj.tags) ?
+                    proj.tags.map((tag: string, tIdx: number) => (
+                      <span key={tIdx} className="bg-slate-100 border border-slate-200 text-[10px] font-bold text-slate-600 px-3 py-1 rounded-lg">
+                        {tag}
+                      </span>
+                    )) : (
+                      <span className="bg-slate-100 border border-slate-200 text-[10px] font-bold text-slate-600 px-3 py-1 rounded-lg">
+                        {proj.tags}
+                      </span>
+                    )}
                   {proj.tech && (
                     <span className="bg-blue-50 border border-blue-100 text-[10px] font-bold text-blue-600 px-3 py-1 rounded-lg">
                       {proj.tech}
